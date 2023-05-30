@@ -17,13 +17,14 @@ int main(void)
 			putchar(' ');
 			putchar(b / 10 + '0');
 			putchar(b % 10 + '0');
-			putchar(',');
 
-			if (a != 98 || b != 99)
+			if (!(a == 98 && b == 99))
 			{
+				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
