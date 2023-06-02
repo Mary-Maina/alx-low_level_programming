@@ -6,9 +6,8 @@
  */
 int _isdigit(int c)
 {
-	if (c >= 0 && c < 10)
+	if (c >= '0' && c <= '9')
 	{
-		_putchar(c + '0');
 		return (1);
 	}
 	else
