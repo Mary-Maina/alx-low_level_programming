@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main- Program entry point
+ * _puts- prints strings
+ * @s: String
  * Return: 0 Always
  */
-int main(void)
+
+void _puts(char *s)
 {
-	_puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	printf("%s\n", s);
 }
