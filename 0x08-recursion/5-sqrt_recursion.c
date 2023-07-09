@@ -39,12 +39,12 @@ int sqRoot(int n, int low, int high)
 	{
 		return (x);
 	}
-	else if (sw > n)
+	else if (sw < n)
 	{
-		return (sqRoot(n, low, x - 1));
+		return (sqRoot(n, x + 1, high));
 	}
 	else
 	{
-		return (sqRoot(n, x + 1, high));
+		return (sqRoot(n, low, x - 1));
 	}
 }
