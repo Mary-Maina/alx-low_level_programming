@@ -12,7 +12,7 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (sqRoot(n, 0, n));
+		return (sqRoot(n, 1, n));
 	}
 }
 /**
@@ -25,6 +25,7 @@ int _sqrt_recursion(int n)
 int sqRoot(int n, int low, int high)
 {
 	int x;
+	int sw;
 
 	if (low > high)
 	{
@@ -32,12 +33,13 @@ int sqRoot(int n, int low, int high)
 	}
 
 	x = (low + high) / 2;
+	sw = x * x;
 
-	if (x * x == n)
+	if (sw == n)
 	{
 		return (x);
 	}
-	else if (x * x > n)
+	else if (sw > n)
 	{
 		return (sqRoot(n, low, x - 1));
 	}
