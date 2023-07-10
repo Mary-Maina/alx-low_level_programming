@@ -13,5 +13,7 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int sqRoot(int n, int a);
 int prime_i(int n, int a);
+int check_palindrome(char *s, int left, int right);
+int calculate_length(char *s);
 
 #endif
