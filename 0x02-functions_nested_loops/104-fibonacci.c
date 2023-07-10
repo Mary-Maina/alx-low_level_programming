@@ -13,7 +13,7 @@ int main(void)
 
 	printf("%u, %u", fibonacci[0], fibonacci[1]);
 
-	for (i = 0; i < 98; i++)
+	for (i = 2; i < 98; i++)
 	{
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 		printf(", %u", fibonacci[i]);
