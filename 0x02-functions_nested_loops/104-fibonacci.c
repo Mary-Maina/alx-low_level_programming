@@ -5,18 +5,21 @@
  */
 int main(void)
 {
-	unsigned int fibonacci[98];
+	unsigned int fib1 = 1;
+	unsigned int fib2 = 2;
+	unsigned int fib_next;
 	int i;
 
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
-
-	printf("%u, %u", fibonacci[0], fibonacci[1]);
+	printf("%u, %u", fib1, fib2);
 
 	for (i = 2; i < 98; i++)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-		printf(", %u", fibonacci[i]);
+		fib_next = fib1 + fib2;
+
+		printf(", %u", fib_next);
+
+		fib1 = fib2;
+		fib2 = fib_next;
 	}
 	printf("\n");
 
