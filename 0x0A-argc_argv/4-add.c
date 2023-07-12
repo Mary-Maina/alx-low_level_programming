@@ -12,8 +12,9 @@ int main(int argc, char *argv[])
 	int total = 0;
 	char *s;
 
-	if (argc == 1)
+	if (argc <= 1)
 	{
+		printf("0\n");
 		return (0);
 	}
 
