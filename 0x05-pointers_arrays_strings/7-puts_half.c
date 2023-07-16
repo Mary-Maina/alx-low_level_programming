@@ -19,12 +19,12 @@ void puts_half(char *str)
 
 	x = total / 2;
 
-	if (total % 2 != 0)
+	if (x % 2 != 0)
 	{
-		x = (total + 1) / 2;
+		x = (total - 1) / 2;
 	}
 
-	for (a = x; a <= total; a++)
+	for (a = x + 1; a <= total; a++)
 	{
 		_putchar(str[a]);
 	}
