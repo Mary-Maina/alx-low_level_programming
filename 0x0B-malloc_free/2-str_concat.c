@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j, k, x, i;
 	char *result;
 	unsigned int total = 0;
-	unsigned int size = 0;
+	unsigned int size = 1;
 
 	if (s1 == NULL || s2 == NULL)
 	{
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		total++;
 	}
-	result = (char *)malloc((size + total + 1) * sizeof(char));
+	result = (char *)malloc((size + total) * sizeof(char));
 
 	if (result == NULL)
 	{
