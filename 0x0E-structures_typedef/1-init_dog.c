@@ -29,6 +29,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 	if (d->name == NULL || d->owner == NULL)
 	{
+		free(d->name);
+		free(d->owner);
 		return;
 	}
 	for (i = 0; name[i] != '\0'; i++)
