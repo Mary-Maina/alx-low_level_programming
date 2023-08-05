@@ -1,17 +1,16 @@
+section .data
+	msg db "Hello, Holberton", 0x0A
+	msg_len equ $-msg
 section .text
 	global main
-
 main:
-	mov eax, 0x4
-	mov ebx, 1
-	mov ecx, message
-	mov edx,  message_len
-	int 0x80
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, msg_len
+	syscall
 
-	mov eax, 1
-	mov ebx, 0
-	int 0x80
+	mov rax, 60
+	mov rdi, 0
+	syscall
 
-section .data
-	message: db "Hello, Holberton", 0xA
-	message_len equ $-message
