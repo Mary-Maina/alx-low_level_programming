@@ -1,18 +1,17 @@
-section .data
-	hello db "Hello, Holberton",0
-	newline db 10, 0
-	format db "%s", 0
 section .text
-	extern printf
+	global main
 
-global main
 main:
-	push rbp
-	mov rdi, format
-	mov rsi, hello
-	xor rax, rax
-	call printf
-	mov rsi, newline
-	call printf
-	pop rbp
-	ret
+	mov eax, 0x4
+	mov ebx, 1
+	mov ecx, message
+	mov edx,  message_len
+	int 0x80
+
+	mov eax, 1
+	mov ebx, 0
+	int 0x80
+
+section .data
+	message: db "Hello, Holberton", 0xA
+	message_len equ $-message
