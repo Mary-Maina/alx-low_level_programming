@@ -7,8 +7,8 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total = 0, dec = 1, len = 0;
-	int i;
+	unsigned int total = 0, dec = 1;
+	int i, len = 0;
 
 	len = length_string(b);
 
@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	for (i = len - 1; i >= 0; i--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] < '0' || b[i] > '1')
 		{
 			return (0);
 		}
