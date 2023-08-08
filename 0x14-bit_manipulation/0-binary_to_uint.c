@@ -7,39 +7,20 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total = 0, dec = 1;
-	int i, len = 0;
-
-	len = length_string(b);
+	unsigned int dec = 0;
+	int i;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	for (i = len - 1; i >= 0; i--)
+	for (i = 0; b[i]; i++)
 	{
 		if (b[i] < '0' || b[i] > '1')
 		{
 			return (0);
 		}
-		total += (b[i] - '0') * dec;
-		dec = dec * 2;
+		dec = 2 * dec + (b[i] - '0');
 	}
-	return (total);
-}
-/**
- * length_string- Calculates the length of a string
- * @s: String
- * Return: Total length
- */
-unsigned int length_string(const char *s)
-{
-	unsigned int i;
-	unsigned int total = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		total++;
-	}
-	return (total);
+	return (dec);
 }
