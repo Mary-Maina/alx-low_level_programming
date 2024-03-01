@@ -7,13 +7,17 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = _strlen(dest);
+	char *ptr = dest;
 	int j;
 
+	while (*ptr != '\0')
+	{
+		ptr++;
+	}
 	for (j = 0; src[j] != '\0'; j++)
 	{
-		dest[i + j] = src[j];
+		*ptr++ = src[j];
 	}
-	dest[i + j] = '\0';/*Inputing null after sting*/
+	*ptr = '\0';/*Inputing null after sting*/
 	return (dest);
 }
